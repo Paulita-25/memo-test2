@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Memo-Test </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+</head>
+
+<body>
+    <div class="main-container">
+
+        <section class="start-game">
+
+            <h1> Memotest </h1>
+            <p> Hola 👋, vamos a jugar al Memotest</p>
+            <p> Pero antes de empezar...</p>
+            <p> Cual es tu nombre bella persona❓ </p>
+
+            <input class="name" type="text" placeholder="Paulita" />
+
+            <p> Con que dificultad te gustaria jugar, bella persona?</p>
+
+            <button id="easy" class="button"> FACIL </button>
+            <button id="medium" class="button"> INTERMEDIO </button>
+            <button id="expert" class="button"> EXPERTO </button>
+
+            <p id="requisito" class="hide"> Ups! Necesitamos que pongas tu nombre </p>
+
+        </section>
+
+
+        <section class="game hide">
+
+            <div class="info">
+                <h1> Memotest </h1>
+                <p id="name"> Hola </p>
+                <p id="intentos"> Encontra todos los pares en menos de </p>
+                <p id="nivel"> Nivel : </p>
+            </div>
+
+            <div class="imagenes">
+
+                <div class="filas">
+                    <div>
+                        <img class="img" id="1" src="img/tapada.jpg" alt="" data-id="1" data-img="" />
+                    </div>
+
+                    <div>
+                        <img class="img" id="2" src="img/tapada.jpg" alt="" data-id="2" data-img="" />
+                    </div>
+
+                    <div>
+                        <img class="img" id="3" src="img/tapada.jpg" alt="" data-id="3" data-img="" />
+                    </div>
+                    <div>
+                        <img class="img" id="4" src="img/tapada.jpg" alt="" data-id="4" data-img="" />
+                    </div>
+                </div>
+
+                <div class="filas">
+                    <div>
+                        <img class="img" id="5" src="img/tapada.jpg" alt="" data-id="5" data-img="" />
+                    </div>
+
+                    <div>
+                        <img class="img" id="6" src="img/tapada.jpg" alt="" data-id="6" data-img="" />
+                    </div>
+
+                    <div>
+                        <img class="img" id="7" src="img/tapada.jpg" alt="" data-id="7" data-img="" />
+                    </div>
+                    <div>
+                        <img class="img" id="8" src="img/tapada.jpg" alt="" data-id="8" data-img="" />
+                    </div>
+                </div>
+
+                <div class="filas">
+                    <div>
+                        <img class="img" id="9" src="img/tapada.jpg" alt="" data-id="9" data-img="" />
+                    </div>
+
+                    <div>
+                        <img class="img" id="10" src="img/tapada.jpg" alt="" data-id="10" data-img="" />
+                    </div>
+
+                    <div>
+                        <img class="img" id="11" src="img/tapada.jpg" alt="" data-id="11" data-img="" />
+                    </div>
+                    <div>
+                        <img class="img" id="12" src="img/tapada.jpg" alt="" data-id="12" data-img="" />
+                    </div>
+                </div>
+                <div class="intentos">
+                    <p id ="intentosEnElJuego">Intentos: </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="end-game hide">
+
+            <div class="parte1">
+
+                <p>GANASTE con .. intentos.</p>
+                <p>Ya podes volver a jugar!!!</p>
+                <button id = "volver">VOLVER A JUGAR</button>
+
+
+                <div class="parte2">
+                    <div>
+                        <p>Nombre</p>
+                    </div>
+
+                    <div>
+                        <p>Nivel</p>
+                    </div>
+
+                    <div>
+                        <p>Intentos</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
