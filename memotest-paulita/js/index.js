@@ -12,21 +12,47 @@ $("#easy").on("click", function () {
     }
 })
 
-// $("#volver").on("click", function () {
-//     $("game").addClass("hide")
-//     $("start-game").removeClass("hide")
+$("#medium").on("click", function () {
+    var valorInput = $(".name").val()
+    if (valorInput == "") {
+        $("#requisito").removeClass("hide");
+    } else {
+        $(".start-game").addClass("hide");
+        $(".game").removeClass("hide");
+        $("#name").append(valorInput);
+        $("#intentos").append("12 intentos");
+        $("#nivel").append("INTERMEDIO");
+    }
+})
+
+$("#expert").on("click", function () {
+    var valorInput = $(".name").val()
+    if (valorInput == "") {
+        $("#requisito").removeClass("hide");
+    } else {
+        $(".start-game").addClass("hide");
+        $(".game").removeClass("hide");
+        $("#name").append(valorInput);
+        $("#intentos").append("9 intentos");
+        $("#nivel").append("EXPERTO");
+    }
+})
 
 
-// })
+$(".volver").on("click", function () {
+    location.reload()
+    $(".game").addClass("hide");
+    $(".start-game").removeClass("hide");
+    $(".loser").addClass("hide");
+    $(".end-game").addClass("hide");
+})
 
 
 var clicks = 0
 var primerClick
 var segundoClick
 var intentos = 0
-var chapaC = 0
-
-
+var paresIguales = 0
 
 $('img').on('click', function () {
     clicks = clicks + 1
@@ -52,7 +78,7 @@ $('img').on('click', function () {
         $("#intentosEnElJuego").html("Intentos: "+ intentos)
 
         if (primerClick.img == segundoClick.img && primerClick.id !== segundoClick.id) {
-            chapaC = chapaC + 1
+            paresIguales = paresIguales + 1
             console.log('iguales')
 
         } else {
@@ -67,13 +93,30 @@ $('img').on('click', function () {
         clicks = 0
     }
 
-    if (chapaC == 6) {
-        $(".end-game").removeClass("hide");
-        // ACA TENGO QUE APENDEAR EL NOMBRE, NIVEL, E INTENTOS 
-    }
+    // if (clicks > 2) {
+    //    $(this).attr("id").addClass("pointer")
+    // }
 
+    if (paresIguales == 6) {
+        console.log("ganaste")
+        $(".end-game").removeClass("hide");
+        $("#cantidad").append(intentos + " intentos");
+        $(".game").css("opacity" , "0.4");
+    } else if (intentos > 18 ) {
+        console.log("perdiste")
+        $(".loser").removeClass("hide");
+        $(".game").css("opacity" , "0.4");
+    }
 })
 
+
+// var data = localStorage.getItem("winners") 
+
+// if (data == null) {
+// 	data = [ ]
+// }
+// data.push(obj)
+// localStorage.setItem("winners", JSON.stringify(data) )
 
 
 const imagenes = [

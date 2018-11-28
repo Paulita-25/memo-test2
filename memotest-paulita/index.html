@@ -99,7 +99,7 @@
                     </div>
                 </div>
                 <div class="intentos">
-                    <p id ="intentosEnElJuego">Intentos: </p>
+                    <p id="intentosEnElJuego">Intentos: </p>
                 </div>
             </div>
         </section>
@@ -108,9 +108,9 @@
 
             <div class="parte1">
 
-                <p>GANASTE con .. intentos.</p>
+                <p>GANASTE con <span id="cantidad"> </span> 😎🎊🎉</p>
                 <p>Ya podes volver a jugar!!!</p>
-                <button id = "volver">VOLVER A JUGAR</button>
+                <button class="volver">VOLVER A JUGAR</button>
 
 
                 <div class="parte2">
@@ -130,6 +130,13 @@
             </div>
 
         </section>
+
+        <section class="loser hide">
+            <p> Perdiste 🙃 </p>
+            <p> Queres volver a jugar ? 👀</p>
+            <button class="volver">VOLVER A JUGAR</button>
+        </section>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
