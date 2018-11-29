@@ -74,7 +74,7 @@ $('img').on('click', function () {
         $('#' + primerClick.id).addClass("flipping")
         $('#' + primerClick.id).addClass("pointer")
         
-    } else {
+    } else if (clicks == 2) {
         
         segundoClick = {
             id: $(this).attr('id'),
@@ -90,6 +90,7 @@ $('img').on('click', function () {
         if (primerClick.img == segundoClick.img && primerClick.id !== segundoClick.id) {
             paresIguales = paresIguales + 1
             console.log('iguales')
+            clicks = 0
 
         } else {
             console.log('distintas')
@@ -100,10 +101,11 @@ $('img').on('click', function () {
                 $('#' + segundoClick.id).removeClass("pointer")
                 $('#' + primerClick.id).removeClass("flipping")
                 $('#' + segundoClick.id).removeClass("flipping")
+                clicks = 0
+
             }, 1000)
             
         }
-        clicks = 0
     }
 
     if (paresIguales == 6) {
@@ -178,17 +180,19 @@ function shuffle(a) {
 $("img").on('click', function (e) {
     const imgId = e.target.id
     const id = $('#' + imgId).attr('data-id')
-    $("#" + imgId).attr('src', desordenado[id - 1])
-    setTimeout(function () {
-    }, 3000);
+    if(clicks < 3) {
+        console.log("entra")
+        $("#" + imgId).attr('src', desordenado[id - 1])
+        
+    }
 })
 
 
 // Lo que falta! 
 
 // Importante!
-// Resolver tema clicks!
-// Ver el tema del flip 
+// Resolver tema clicks! - Funciona!
+// Ver el tema del flip - Funciona pero las imagenes quedan mal!
 
 // No tan importante! 
 // Version mobile de Ganaste y perdiste
