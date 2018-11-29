@@ -1,9 +1,13 @@
+var nivel ;
+var maximo ;
 
 $("#easy").on("click", function () {
     var valorInput = $(".name").val()
     if (valorInput == "") {
         $("#requisito").removeClass("hide");
     } else {
+        nivel = "facil"
+        maximo = 18
         $(".start-game").addClass("hide");
         $(".game").removeClass("hide");
         $("#name").append(valorInput);
@@ -17,6 +21,8 @@ $("#medium").on("click", function () {
     if (valorInput == "") {
         $("#requisito").removeClass("hide");
     } else {
+        nivel = "intermedio"
+        maximo = 12
         $(".start-game").addClass("hide");
         $(".game").removeClass("hide");
         $("#name").append(valorInput);
@@ -30,6 +36,8 @@ $("#expert").on("click", function () {
     if (valorInput == "") {
         $("#requisito").removeClass("hide");
     } else {
+        nivel = "experto"
+        maximo = 9
         $(".start-game").addClass("hide");
         $(".game").removeClass("hide");
         $("#name").append(valorInput);
@@ -47,7 +55,6 @@ $(".volver").on("click", function () {
     $(".end-game").addClass("hide");
 })
 
-
 var clicks = 0
 var primerClick
 var segundoClick
@@ -64,18 +71,21 @@ $('img').on('click', function () {
             img: $(this).attr('data-img')
         }
 
-        $('#'+primerClick.id).addClass("pointer")
-
+        $('#' + primerClick.id).addClass("flipping")
+        $('#' + primerClick.id).addClass("pointer")
+        
     } else {
+        
         segundoClick = {
             id: $(this).attr('id'),
             img: $(this).attr('data-img')
         }
 
-        $('#'+segundoClick.id).addClass("pointer")
+        $('#' + segundoClick.id).addClass("flipping")
+        $('#' + segundoClick.id).addClass("pointer")
 
-        intentos = intentos + 1 
-        $("#intentosEnElJuego").html("Intentos: "+ intentos)
+        intentos = intentos + 1
+        $("#intentosEnElJuego").html("Intentos: " + intentos)
 
         if (primerClick.img == segundoClick.img && primerClick.id !== segundoClick.id) {
             paresIguales = paresIguales + 1
@@ -86,38 +96,54 @@ $('img').on('click', function () {
             setTimeout(function () {
                 $('#' + primerClick.id).attr('src', "img/tapada.jpg")
                 $('#' + segundoClick.id).attr('src', "img/tapada.jpg")
+                $('#' + primerClick.id).removeClass("pointer")
+                $('#' + segundoClick.id).removeClass("pointer")
+                $('#' + primerClick.id).removeClass("flipping")
+                $('#' + segundoClick.id).removeClass("flipping")
             }, 1000)
-            $('#'+primerClick.id).removeClass("pointer")
-            $('#'+segundoClick.id).removeClass("pointer")
+            
         }
         clicks = 0
     }
-
-    // if (clicks > 2) {
-    //    $(this).attr("id").addClass("pointer")
-    // }
 
     if (paresIguales == 6) {
         console.log("ganaste")
         $(".end-game").removeClass("hide");
         $("#cantidad").append(intentos + " intentos");
-        $(".game").css("opacity" , "0.4");
-    } else if (intentos > 18 ) {
+        $(".game").css("opacity", "0.4");
+
+        var valorInput = $(".name").val()
+
+        var ranking = JSON.parse(localStorage.getItem("ganadores"))
+
+        var obj = {
+            nombre: valorInput,
+            nivel: nivel,
+            intentos: intentos
+        }
+
+        if (ranking == null) {
+            ranking = []
+        }
+
+        ranking.push(obj)
+
+        localStorage.setItem("ganadores", JSON.stringify(ranking))
+
+        for (var i = 0; i < ranking.length; i ++) {
+
+        $("#nombre").append(`${ranking[i].nombre}`)
+        $("#Nivel").append(`${ranking[i].nivel}`)
+        $("#intents").append(`${ranking[i].intentos}`)
+
+        }
+
+    } else if (intentos > maximo) {
         console.log("perdiste")
         $(".loser").removeClass("hide");
-        $(".game").css("opacity" , "0.4");
+        $(".game").css("opacity", "0.4");
     }
 })
-
-
-// var data = localStorage.getItem("winners") 
-
-// if (data == null) {
-// 	data = [ ]
-// }
-// data.push(obj)
-// localStorage.setItem("winners", JSON.stringify(data) )
-
 
 const imagenes = [
     "img/alce.jpg",
@@ -158,3 +184,12 @@ $("img").on('click', function (e) {
 })
 
 
+// Lo que falta! 
+
+// Importante!
+// Resolver tema clicks!
+// Ver el tema del flip 
+
+// No tan importante! 
+// Version mobile de Ganaste y perdiste
+// Ordenar con SASS lo que se apendea con Local storage

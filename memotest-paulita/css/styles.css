@@ -18,15 +18,18 @@ body {
   border: 15px solid black;
   border-radius: 15px;
 }
+
 .start-game h1 {
   font-family: "Pacifico", cursive;
   color: dodgerblue;
 }
+
 .start-game p {
   font-size: 14px;
   font-family: "Pangolin", cursive;
   margin: 0px;
 }
+
 .start-game input {
   width: 80%;
   height: 20px;
@@ -58,16 +61,19 @@ button {
   border: 13px solid black;
   border-radius: 15px;
 }
+
 .game .info {
   margin-bottom: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .game .info h1 {
   font-family: "Pacifico", cursive;
   color: dodgerblue;
 }
+
 .game .info p {
   font-size: 14px;
   font-family: "Pangolin", cursive;
@@ -98,6 +104,7 @@ button {
   width: 40%;
   margin-bottom: 2%;
 }
+
 .imagenes .intentos {
   margin-top: 10px;
   display: flex;
@@ -107,6 +114,7 @@ button {
   border-radius: 11px;
   background-color: white;
 }
+
 .imagenes .intentos p {
   font-size: 14px;
   font-family: "Pangolin", cursive;
@@ -128,15 +136,18 @@ button {
   border-radius: 10px;
   margin-top: 7px;
 }
+
 .parte1 h1 {
   font-family: "Pacifico", cursive;
   color: dodgerblue;
 }
+
 .parte1 p {
   font-size: 14px;
   font-family: "Pangolin", cursive;
   margin: 0px;
 }
+
 .parte1 button {
   width: 37%;
   margin-top: 10px;
@@ -150,6 +161,7 @@ button {
   justify-content: center;
   margin-bottom: 30px;
 }
+
 .parte2 div {
   display: flex;
   justify-content: center;
@@ -170,11 +182,13 @@ button {
   border-radius: 10px;
   margin-top: 7px;
 }
+
 .loser p {
   font-size: 14px;
   font-family: "Pangolin", cursive;
   margin: 4px;
 }
+
 .loser button {
   width: 50%;
   margin-top: 10px;
@@ -193,9 +207,11 @@ button {
   .start-game {
     width: 65%;
   }
+
   .start-game .button {
     width: 60%;
   }
+
   .start-game p {
     margin-left: 6px;
   }
@@ -203,9 +219,15 @@ button {
   .game {
     width: 100%;
   }
+
   .game .imagenes {
     width: 90%;
   }
+}
+.flipping {
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+  transition: all 0.5s linear;
 }
 
 /*# sourceMappingURL=styles.css.map */

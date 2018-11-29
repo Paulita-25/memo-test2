@@ -1,222 +1,234 @@
 body {
-    background-image: url("../img/fondo.jpg");
+  background-image: url("../img/fondo.jpg");
 }
 
-
-.main-container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.main-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
-
 
 .start-game {
-    background-color: #f9e9e0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 30%;
-    height: auto;
-    border: 15px solid black;
-    border-radius: 15px;
-        h1 {
-            font-family: 'Pacifico', cursive;
-            color:dodgerblue;
-        }
-        p {
-            font-size: 14px;
-            font-family:  'Pangolin', cursive; 
-            margin: 0px; 
-        }
-        input {
-            width: 80%;
-            height: 20px; 
-            margin-top: 13px;
-            margin-bottom: 15px;       
-        }
+  background-color: #f9e9e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  height: auto;
+  border: 15px solid black;
+  border-radius: 15px;
+}
+
+.start-game h1 {
+  font-family: "Pacifico", cursive;
+  color: dodgerblue;
+}
+
+.start-game p {
+  font-size: 14px;
+  font-family: "Pangolin", cursive;
+  margin: 0px;
+}
+
+.start-game input {
+  width: 80%;
+  height: 20px;
+  margin-top: 13px;
+  margin-bottom: 15px;
 }
 
 button {
-    border: none;
-    border-radius: 10px;
-    color:white;
-    margin-bottom: 10px;
-    background-color: orange;
-    width: 80%;
-    height: 40px;   
-    font-family:  'Pangolin', cursive; 
+  border: none;
+  border-radius: 10px;
+  color: white;
+  margin-bottom: 10px;
+  background-color: orange;
+  width: 80%;
+  height: 40px;
+  font-family: "Pangolin", cursive;
 }
 
 #requisito {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
-.game { 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-    background-color: rgba(249, 233, 224, 0.6);
-    border: 13px solid black;
-    border-radius: 15px;
-    
-    .info {
-        margin-bottom: 25px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-        h1 {
-           font-family: 'Pacifico', cursive;
-           color:dodgerblue;
-        }
-        p {
-            font-size: 14px;
-            font-family:  'Pangolin', cursive; 
-            margin: 0px;  
-        }
-    }
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  background-color: rgba(249, 233, 224, 0.6);
+  border: 13px solid black;
+  border-radius: 15px;
 }
 
-.imagenes img {  
-    width: 100%;
-    height: 100%;   
+.game .info {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.filas{
-    display: flex;
-    justify-content: center;
+.game .info h1 {
+  font-family: "Pacifico", cursive;
+  color: dodgerblue;
 }
 
-.filas div{
-    border: 1px solid orange;
-    margin:3px;
-    display: flex;
-    justify-content: center;
+.game .info p {
+  font-size: 14px;
+  font-family: "Pangolin", cursive;
+  margin: 0px;
 }
 
-
-.imagenes{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 40%;
-    margin-bottom: 2%;
-    .intentos {
-        margin-top:10px;
-        display:flex;
-        justify-content: center;
-        width: 100%;
-        border:5px solid lightblue;
-        border-radius: 11px;
-        background-color: white;
-        p {
-            font-size: 14px;
-            font-family:  'Pangolin', cursive; 
-            margin: 5px;  
-        }
-    }
+.imagenes img {
+  width: 100%;
+  height: 100%;
 }
 
+.filas {
+  display: flex;
+  justify-content: center;
+}
+
+.filas div {
+  border: 1px solid orange;
+  margin: 3px;
+  display: flex;
+  justify-content: center;
+}
+
+.imagenes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  margin-bottom: 2%;
+}
+
+.imagenes .intentos {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border: 5px solid lightblue;
+  border-radius: 11px;
+  background-color: white;
+}
+
+.imagenes .intentos p {
+  font-size: 14px;
+  font-family: "Pangolin", cursive;
+  margin: 5px;
+}
 
 .end-game {
-    width: 30%;
-    position: absolute;
-    top: 40px;
+  width: 30%;
+  position: absolute;
+  top: 40px;
 }
 
 .parte1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f9e9e0;
-    border: 4px solid black;
-    border-radius: 10px;
-    margin-top: 7px;    
-    h1 {
-        font-family: 'Pacifico', cursive;
-        color:dodgerblue;
-     }
-     p {
-         font-size: 14px;
-         font-family:  'Pangolin', cursive; 
-         margin: 0px;       
-     }
-    button {
-        width: 37%;
-        margin-top:10px;
-        margin-bottom: 15px;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9e9e0;
+  border: 4px solid black;
+  border-radius: 10px;
+  margin-top: 7px;
+}
+
+.parte1 h1 {
+  font-family: "Pacifico", cursive;
+  color: dodgerblue;
+}
+
+.parte1 p {
+  font-size: 14px;
+  font-family: "Pangolin", cursive;
+  margin: 0px;
+}
+
+.parte1 button {
+  width: 37%;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 .parte2 {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 30px;
-        div {
-            display: flex;
-            justify-content: center;
-            width: 25%;
-            border: 1px solid black;          
-        }
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.parte2 div {
+  display: flex;
+  justify-content: center;
+  width: 25%;
+  border: 1px solid black;
 }
 
 .loser {
-    position: absolute;
-    top: 40px;
-    width: 20%;
-    height: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f9e9e0;
-    border: 4px solid black;
-    border-radius: 10px;
-    margin-top: 7px;        
-     p {
-         font-size: 14px;
-         font-family:  'Pangolin', cursive; 
-         margin: 4px;       
-     }
-    button {
-        width: 50%;
-        margin-top:10px;
-        margin-bottom: 15px;
-    }
+  position: absolute;
+  top: 40px;
+  width: 20%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9e9e0;
+  border: 4px solid black;
+  border-radius: 10px;
+  margin-top: 7px;
+}
+
+.loser p {
+  font-size: 14px;
+  font-family: "Pangolin", cursive;
+  margin: 4px;
+}
+
+.loser button {
+  width: 50%;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
-
-// .gris {
-//     color : gray;
-// }
 
 .pointer {
-    pointer-events: none;
+  pointer-events: none;
 }
 
-@media(max-width: 800px){
-
-.start-game {
+@media (max-width: 800px) {
+  .start-game {
     width: 65%;
-        .button {
-            width: 60%;
-        }
-        p {
-            margin-left: 6px;
-        }
-    }
+  }
 
-.game {
+  .start-game .button {
+    width: 60%;
+  }
+
+  .start-game p {
+    margin-left: 6px;
+  }
+
+  .game {
     width: 100%;
-        .imagenes {
-            width: 90%;
-        }
-    }
+  }
 
-
+  .game .imagenes {
+    width: 90%;
+  }
 }
+
+.flipping {
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+  transition: all 0.5s linear;
+}
+
+
