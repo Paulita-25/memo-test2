@@ -17,24 +17,21 @@ body {
   height: auto;
   border: 15px solid black;
   border-radius: 15px;
-}
-
-.start-game h1 {
-  font-family: "Pacifico", cursive;
-  color: dodgerblue;
-}
-
-.start-game p {
-  font-size: 14px;
-  font-family: "Pangolin", cursive;
-  margin: 0px;
-}
-
-.start-game input {
-  width: 80%;
-  height: 20px;
-  margin-top: 13px;
-  margin-bottom: 15px;
+    h1 {
+      font-family: "Pacifico", cursive;
+      color: dodgerblue;
+      }
+    p {
+      font-size: 14px;
+      font-family: "Pangolin", cursive;
+      margin: 0px;
+      }
+    input {
+      width: 80%;
+      height: 20px;
+      margin-top: 13px;
+      margin-bottom: 15px;
+      }
 }
 
 button {
@@ -62,22 +59,20 @@ button {
   border-radius: 15px;
 }
 
-.game .info {
+.info {
   margin-bottom: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.game .info h1 {
-  font-family: "Pacifico", cursive;
-  color: dodgerblue;
-}
-
-.game .info p {
-  font-size: 14px;
-  font-family: "Pangolin", cursive;
-  margin: 0px;
+    h1 {
+      font-family: "Pacifico", cursive;
+      color: dodgerblue;
+    }
+    p {
+      font-size: 14px;
+      font-family: "Pangolin", cursive;
+      margin: 0px;
+    }
 }
 
 .imagenes img {
@@ -105,7 +100,14 @@ button {
   margin-bottom: 2%;
 }
 
-.imagenes .intentos {
+.flipping {
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+  transition: all 0.5s linear;
+}
+
+
+.intentos {
   margin-top: 10px;
   display: flex;
   justify-content: center;
@@ -113,12 +115,12 @@ button {
   border: 5px solid lightblue;
   border-radius: 11px;
   background-color: white;
-}
-
-.imagenes .intentos p {
-  font-size: 14px;
-  font-family: "Pangolin", cursive;
-  margin: 5px;
+  p {
+    font-size: 14px;
+    font-family: "Pangolin", cursive;
+    margin: 5px;
+  }
+  
 }
 
 .end-game {
@@ -135,23 +137,21 @@ button {
   border: 4px solid black;
   border-radius: 10px;
   margin-top: 7px;
-}
-
-.parte1 h1 {
-  font-family: "Pacifico", cursive;
-  color: dodgerblue;
-}
-
-.parte1 p {
-  font-size: 14px;
-  font-family: "Pangolin", cursive;
-  margin: 0px;
-}
-
-.parte1 button {
-  width: 37%;
-  margin-top: 10px;
-  margin-bottom: 15px;
+  h1 {
+    font-family: "Pacifico", cursive;
+    color: dodgerblue;
+  }
+  p {
+    font-size: 14px;
+    font-family: "Pangolin", cursive;
+    margin: 0px;
+  }
+  button {
+    width: 37%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  
 }
 
 .parte2 {
@@ -167,6 +167,11 @@ button {
   justify-content: center;
   width: 25%;
   border: 1px solid black;
+    p {
+      display: flex;
+      flex-direction: column;
+    }
+    
 }
 
 .loser {
@@ -181,18 +186,17 @@ button {
   border: 4px solid black;
   border-radius: 10px;
   margin-top: 7px;
-}
-
-.loser p {
-  font-size: 14px;
-  font-family: "Pangolin", cursive;
-  margin: 4px;
-}
-
-.loser button {
-  width: 50%;
-  margin-top: 10px;
-  margin-bottom: 15px;
+  p {
+    font-size: 14px;
+    font-family: "Pangolin", cursive;
+    margin: 4px;
+  }
+  button {
+    width: 50%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  
 }
 
 .hide {
@@ -223,12 +227,22 @@ button {
   .game .imagenes {
     width: 90%;
   }
+
+  .end-game {
+    width: 80%;
+      .parte2 div {
+        width: 40%
+      }
+  }
+
+  .loser {
+    width: 60%;
+  }
+
+  .volver {
+    width: 40%;
+  }
 }
 
-.flipping {
-  transform: rotateY(180deg);
-  transform-style: preserve-3d;
-  transition: all 0.5s linear;
-}
 
 

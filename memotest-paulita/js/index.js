@@ -134,9 +134,9 @@ $('img').on('click', function () {
 
         for (var i = 0; i < ranking.length; i ++) {
 
-        $("#nombre").append(`${ranking[i].nombre}`)
-        $("#Nivel").append(`${ranking[i].nivel}`)
-        $("#intents").append(`${ranking[i].intentos}`)
+        $("#nombre").append(`<span> ${ranking[i].nombre} </span> `)
+        $("#Nivel").append(` <span> ${ranking[i].nivel} </span> `)
+        $("#intents").append(` <span> ${ranking[i].intentos} </span> `)
 
         }
 
@@ -188,12 +188,6 @@ $("img").on('click', function (e) {
 })
 
 
-// Lo que falta! 
 
-// Importante!
-// Resolver tema clicks! - Funciona!
-// Ver el tema del flip - Funciona pero las imagenes quedan mal!
-
-// No tan importante! 
 // Version mobile de Ganaste y perdiste
 // Ordenar con SASS lo que se apendea con Local storage
